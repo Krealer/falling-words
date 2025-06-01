@@ -1,34 +1,49 @@
-# 🌧️ Falling Words — Typing Game (v1.0.0)
+# 🧠 Falling Words Game
 
-A fun and educational typing game built with HTML, CSS, and JavaScript. Words fall from the sky — type them before they hit the bottom! Difficulty increases as you play.
-
----
-
-### ▶️ [Play on GitHub Pages](https://your-username.github.io/your-repo-name/)
-
-> Replace the link above with your actual deployment URL.
+Type fast, think faster — educational words fall from the sky, and your goal is to type them before they hit the ground!
 
 ---
 
-## 🎮 Gameplay
+## 🎮 Play Now
 
-- Words fall from the top of the screen
-- Type them in the input box to remove them
-- Each correct word increases your score
-- Difficulty is based on **perfect square levels** (1, 4, 9, 16...)
-- Game ends when you miss a word
+👉 [Play on GitHub Pages](https://krealer.github.io/falling-words/)  
+_(Replace with your actual GitHub Pages link)_
 
 ---
 
-## 🧠 Features
+## 🚀 Game Modes
 
-- ✅ Real educational word list
-- ✅ Score & difficulty system
-- ✅ Increasing word complexity and spawn rate
-- ✅ Responsive design for phones, tablets, desktops
-- ✅ Light/Dark mode toggle
-- ✅ Game Over + Retry button
-- ✅ Built for GitHub Pages
+### 🗺️ Adventure Mode
+- Dynamic difficulty based on your score
+- Higher score = faster drops and longer words
+- Survive as long as you can!
+
+### 🎯 Level Select
+- Play fixed levels 1–30
+- Challenge yourself with increasing difficulty
+- Great for focused practice
 
 ---
 
+## 🧩 Features
+
+- 📚 Real educational words (from `words.txt`)
+- 🌗 Dark & light mode toggle
+- 💾 High score tracking (localStorage)
+- ⚡ Scalable to unlimited difficulty levels
+- 🖥️ Responsive design (mobile/tablet/desktop)
+
+---
+
+## 🔧 Project Structure
+
+```bash
+falling-words/
+├── index.html         # Game UI and HTML layout
+├── style.css          # Styling (dark/light mode, responsive)
+├── script.js          # Entry point — loads splash screen
+├── words.txt          # Word list (edit this for new vocab)
+└── modes/
+    ├── splash.js      # Title screen & mode selector
+    ├── adventure.js   # Main game mode (dynamic scaling)
+    └── levelmode.js   # Fixed-level mode (1–30+)

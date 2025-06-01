@@ -1,26 +1,27 @@
-/* 🎨 Base Styles for the Game */
+/* 🎨 Base Page Styling */
 body {
   margin: 0;
-  background: #111;
-  color: white;
+  padding: 0;
   font-family: sans-serif;
+  background-color: #111;
+  color: white;
   overflow: hidden;
 }
 
-/* 📦 Main game container: takes full viewport */
+/* 🕹️ Main game area */
 #game-container {
   position: relative;
   width: 100vw;
   height: 100vh;
 }
 
-/* 🔤 Falling word style */
+/* 🔤 Falling words */
 .word {
   position: absolute;
   top: -30px;
   font-size: 1.5rem;
-  animation: fall linear forwards;
   white-space: nowrap;
+  animation: fall linear forwards;
 }
 
 /* 🎬 Falling animation */
@@ -30,25 +31,25 @@ body {
   }
 }
 
-/* ⌨️ Input box for typing words */
+/* ⌨️ Typing input */
 #player-input {
   position: absolute;
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
+  width: 300px;
   padding: 10px 20px;
   font-size: 1.2rem;
-  border-radius: 8px;
   border: none;
-  outline: none;
-  width: 300px;
-  background: #222;
+  border-radius: 8px;
+  background-color: #222;
   color: white;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  outline: none;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
   z-index: 1000;
 }
 
-/* 🌗 Theme toggle button (top right) */
+/* 🌗 Theme toggle button */
 #theme-toggle {
   position: absolute;
   top: 10px;
@@ -62,46 +63,44 @@ body {
   z-index: 1001;
 }
 
-/* 🆔 Version label (bottom left) */
-#version-label {
+/* 🧾 Score and level text */
+#score, #difficulty, #high-score {
   position: absolute;
-  bottom: 10px;
   left: 10px;
-  font-size: 0.9rem;
-  color: #888;
+  font-size: 1.2rem;
   z-index: 1000;
 }
 
-/* 🌞 Light Mode Styles */
+#score { top: 10px; }
+#difficulty { top: 40px; }
+#high-score { top: 70px; }
+
+/* 🔘 Light mode overrides */
 body.light {
-  background: #f5f5f5;
+  background-color: #f5f5f5;
   color: #111;
 }
 
 body.light #player-input {
-  background: white;
-  color: black;
+  background-color: white;
+  color: #000;
 }
 
-body.light .word {
-  color: #222;
-}
-
-/* 🌓 Light Mode adjustments for UI text */
+body.light .word,
 body.light #score,
 body.light #difficulty,
+body.light #high-score,
 body.light #version-label {
   color: #111;
 }
 
-/* 🔘 Light mode toggle button */
 body.light #theme-toggle {
   background: #ddd;
   color: #111;
   border: 1px solid #aaa;
 }
 
-/* 📱 Responsive: Small screens (phones) */
+/* 📱 Responsive: Small screens */
 @media (max-width: 600px) {
   .word {
     font-size: 1.2rem;
@@ -110,18 +109,15 @@ body.light #theme-toggle {
   #player-input {
     width: 90%;
     font-size: 1rem;
-    padding: 8px 16px;
   }
 
-  #score,
-  #difficulty {
-    font-size: 1.2rem;
-    top: 8px;
+  #score, #difficulty, #high-score {
+    font-size: 1rem;
     left: 8px;
   }
 }
 
-/* 📱 Responsive: Medium screens (tablets) */
+/* 📱 Responsive: Medium screens */
 @media (max-width: 900px) {
   .word {
     font-size: 1.3rem;
@@ -132,8 +128,7 @@ body.light #theme-toggle {
     font-size: 1.1rem;
   }
 
-  #score,
-  #difficulty {
-    font-size: 1.3rem;
+  #score, #difficulty, #high-score {
+    font-size: 1.1rem;
   }
 }

@@ -3,32 +3,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Falling Words Game</title>
+
+  <!-- 🧠 Game version -->
+  <meta name="version" content="2.0.0" />
+
+  <!-- 🌐 Favicon -->
   <link rel="icon" type="image/png" href="icon.png" />
 
-  <!-- 🎨 Link to the external stylesheet -->
+  <!-- 🎨 Main stylesheet -->
   <link rel="stylesheet" href="style.css" />
+
+  <!-- 📱 Responsive display scaling -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
 <body>
 
-  <!-- 🎮 Main game area: falling words appear here -->
+  <!-- 🕹️ Game area -->
   <div id="game-container"></div>
 
-  <!-- ⌨️ Player input: type words to catch falling ones -->
-  <input
-    type="text"
-    id="player-input"
-    placeholder="Type a word..."
-    autocomplete="off"
-  />
+  <!-- 🌘 Light/Dark mode toggle -->
+  <button id="theme-toggle" title="Toggle light/dark mode">🌓</button>
 
-  <!-- 🌓 Theme toggle button: switches between dark/light mode -->
-  <button id="theme-toggle">Toggle Theme</button>
+  <!-- 🧩 Load JS using module type for ES6 imports -->
+  <script type="module" src="script.js"></script>
 
-  <!-- 🆔 Version label: shows current version number -->
-  <div id="version-label">v1.0.0</div>
-
-  <!-- 🧠 Game logic script -->
-  <script src="script.js"></script>
 </body>
 </html>
