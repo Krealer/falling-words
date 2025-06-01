@@ -7,7 +7,6 @@ Type fast, think faster — educational words fall from the sky, and your goal i
 ## 🎮 Play Now
 
 👉 [Play on GitHub Pages](https://krealer.github.io/falling-words/)  
-_(Replace with your actual GitHub Pages link)_
 
 ---
 
